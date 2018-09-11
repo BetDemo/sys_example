@@ -1,0 +1,333 @@
+/**
+ * author: Cui Xingao
+ * date: 2018/6/27
+*/
+@charset "UTF-8";
+body, html {
+    color: #aaa;
+}
+.login-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../images/login_bg.png) no-repeat center;
+}
+.login-top {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.logo {
+    float: left;
+    width: 46px;
+    height: 46px;
+    background: url(../images/logo.png) no-repeat;
+}
+h1 {
+    float: left;
+    padding-left: 16px;
+    margin-left: 16px;
+    margin-top: 7px;
+    line-height: 32px;
+    border-left: 1px solid rgba(255,255,255,.4);
+    color: #fff;
+    font-size: 24px;
+}
+.gui-log-wrap {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    margin-top: -220px;
+    padding: 20px 0;
+    animation: jump2 1s ease-in-out;
+    /* Firefox: */
+    -moz-animation: jump2 1s ease-in-out;
+    /* Safari 和 Chrome: */
+    -webkit-animation: jump2 1s ease-in-out;
+    /* Opera: */
+    -o-animation: jump2 1s ease-in-out;
+}
+h2.gui-h2 {
+    color: #209ffc;
+}
+.ipt-admin,
+.ipt-psd {
+    padding-left: 40px;
+}
+.gui-login .gui-ipt.ipt-admin {
+    background: url(../images/ipt_admin.png) no-repeat left center;
+}
+.gui-login .gui-ipt.ipt-psd {
+    background: url(../images/ipt_psd.png) no-repeat left center;
+}
+.gui-login .gui-ipt:focus {
+    border-color: transparent transparent #209ffc;
+}
+.gui-login .gui-btn-block {
+    background: #209ffc;
+}
+.gui-btn-wrap {
+    margin: 10px 0;
+}
+.gui-fpwd {
+    margin: 0;
+}
+.layui-form-checkbox[lay-skin="primary"]:hover i {
+    border-color: #209ffc;
+}
+.layui-form-checked[lay-skin="primary"] i {
+    background-color: #209ffc;
+}
+.gui-login .layui-form-checkbox[lay-skin="primary"] span {
+    color: #aaa;
+}
+.gui-linkgy {
+    color: #aaa;
+}
+.gui-login {
+    padding-top: 0;
+}
+.gui-login .gui-btn-block {
+    height: 50px;
+    width: 115px;
+}
+.pic-wrap {
+    position: absolute;
+    width: 514px;
+    height: 460px;
+    top: 50%;
+    left: 10%;
+    margin-top: -230px;
+    animation: jump 1s ease-in-out;
+    /* Firefox: */
+    -moz-animation: jump 1s ease-in-out;
+    /* Safari 和 Chrome: */
+    -webkit-animation: jump 1s ease-in-out;
+    /* Opera: */
+    -o-animation: jump 1s ease-in-out;
+}
+@-moz-keyframes jump /* Firefox */
+{
+    0%   {transform: translateY(-494px);}
+    25%  {transform: translateY(0px)}
+    50%  {transform: translateY(-20px)}
+    100%  {transform: translateY(0px)}
+}
+@-webkit-keyframes jump /* Safari 和 Chrome */
+{
+    0%   {transform: translateY(-494px);}
+    25%  {transform: translateY(0px)}
+    50%  {transform: translateY(-20px)}
+    100%  {transform: translateY(0px)}
+}
+@-o-keyframes jump /* Opera */
+{
+    0%   {transform: translateY(-494px);}
+    25%  {transform: translateY(0px)}
+    50%  {transform: translateY(-20px)}
+    100%  {transform: translateY(0px)}
+}
+@keyframes jump
+{
+    0%   {transform: translateY(-494px);}
+    25%  {transform: translateY(0px)}
+    50%  {transform: translateY(-20px)}
+    100%  {transform: translateY(0px)}
+}
+
+@keyframes jump2
+{
+    0%   {transform: translateY(494px);}
+    25%  {transform: translateY(0px)}
+    50%  {transform: translateY(20px)}
+    100%  {transform: translateY(0px)}
+}
+@-moz-keyframes jump2 /* Firefox */
+{
+    0%   {transform: translateY(494px);}
+    25%  {transform: translateY(0px)}
+    50%  {transform: translateY(20px)}
+    100%  {transform: translateY(0px)}
+}
+@-webkit-keyframes jump2 /* Safari 和 Chrome */
+{
+    0%   {transform: translateY(494px);}
+    25%  {transform: translateY(0px)}
+    50%  {transform: translateY(20px)}
+    100%  {transform: translateY(0px)}
+}
+@keyframes jump2
+{
+    0%   {transform: translateY(494px);}
+    25%  {transform: translateY(0px)}
+    50%  {transform: translateY(20px)}
+    100%  {transform: translateY(0px)}
+}
+
+.login-pic1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 514px;
+    height: 460px;
+    background: url(../images/login_pic1.png) no-repeat;
+}
+.login-pic2 {
+    position: absolute;
+    width: 66px;
+    height: 160px;
+    left: 470px;
+    bottom: 270px;
+    background: url(../images/login_pic2.png) no-repeat;
+    animation: second 2s linear infinite alternate;
+    /* Firefox: */
+    -moz-animation: second 2s linear infinite alternate;
+    /* Safari 和 Chrome: */
+    -webkit-animation: second 2s linear infinite alternate;
+    /* Opera: */
+    -o-animation: second 2s linear infinite alternate;
+}
+@-moz-keyframes second /* Firefox */
+{
+    100% {left: 436px; bottom: 280px;}
+    0%   {left: 470px; bottom: 270px;}
+}
+@-webkit-keyframes second /* Safari 和 Chrome */
+{
+    100% {left: 436px; bottom: 280px;}
+    0%   {left: 470px; bottom: 270px;}
+}
+@-o-keyframes second /* Opera */
+{
+    100% {left: 436px; bottom: 280px;}
+    0%   {left: 470px; bottom: 270px;}
+}
+@keyframes second
+{
+    100% {left: 436px; bottom: 280px;}
+    0%   {left: 470px; bottom: 270px;}
+}
+.login-pic3 {
+    position: absolute;
+    width: 51px;
+    height: 139px;
+    left: 126px;
+    bottom: 290px;
+    background: url(../images/login_pic3.png) no-repeat;
+    animation: first 2s linear infinite alternate;
+    /* Firefox: */
+    -moz-animation: first 2s linear infinite alternate;
+    /* Safari 和 Chrome: */
+    -webkit-animation: first 2s linear infinite alternate;
+    /* Opera: */
+    -o-animation: first 2s linear infinite alternate;
+}
+@-moz-keyframes first /* Firefox */
+{
+    0%   {left: 140px; bottom: 230px;}
+    100% {left: 180px; bottom: 218px;}
+}
+@-webkit-keyframes first /* Safari 和 Chrome */
+{
+    0%   {left: 140px; bottom: 230px;}
+    100% {left: 180px; bottom: 218px;}
+}
+@-o-keyframes first /* Opera */
+{
+    0%   {left: 140px; bottom: 230px;}
+    100% {left: 180px; bottom: 218px;}
+}
+@keyframes first
+{
+    0%   {left: 140px; bottom: 230px;}
+    100% {left: 180px; bottom: 218px;}
+}
+.login-pic4 {
+    position: absolute;
+    width: 147px;
+    height: 120px;
+    left: 388px;
+    bottom: 168px;
+    background: url(../images/login_pic4.png) no-repeat;
+}
+.login-pic5 {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    left: 380px;
+    top: -20px;
+    background: url(../images/login_pic5.png) no-repeat;
+    animation: three 1s linear infinite alternate;
+    /* Firefox: */
+    -moz-animation: three 1s linear infinite alternate;
+    /* Safari 和 Chrome: */
+    -webkit-animation: three 1s linear infinite alternate;
+    /* Opera: */
+    -o-animation: three 1s linear infinite alternate;
+}
+@-moz-keyframes three /* Firefox */
+{
+    0%   {transform: scale(.3);}
+    100% {transform: scale(1);}
+}
+@-webkit-keyframes three /* Safari 和 Chrome */
+{
+    0%   {transform: scale(.3);}
+    100% {transform: scale(1);}
+}
+@-o-keyframes three /* Opera */
+{
+    0%   {transform: scale(.3);}
+    100% {transform: scale(1);}
+}
+@keyframes three
+{
+    0%   {transform: scale(.3);}
+    100% {transform: scale(1);}
+}
+.login-pic6 {
+    position: absolute;
+    width: 502px;
+    height: 179px;
+    left: -30px;
+    bottom: 10px;
+    background: url(../images/login_pic6.png) no-repeat;
+	 animation: three 2s linear infinite alternate;
+    /* Firefox: */
+    -moz-animation: three 2s linear infinite alternate;
+    /* Safari 和 Chrome: */
+    -webkit-animation: three 2s linear infinite alternate;
+    /* Opera: */
+    -o-animation: three 2s linear infinite alternate;
+}
+@-moz-keyframes three /* Firefox */
+{
+    0%   {transform: scale(.9);}
+    100% {transform: scale(1);}
+}
+@-webkit-keyframes three /* Safari 和 Chrome */
+{
+    0%   {transform: scale(.9);}
+    100% {transform: scale(1);}
+}
+@-o-keyframes three /* Opera */
+{
+    0%   {transform: scale(.9);}
+    100% {transform: scale(1);}
+}
+@keyframes three
+{
+    0%   {transform: scale(.9);}
+    100% {transform: scale(1);}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.winter.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.yjj.sys_demo.sys.model.User">
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+    <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+    <result column="user_info" jdbcType="VARCHAR" property="userInfo" />
+    <result column="user_miss_time" jdbcType="TIMESTAMP" property="userMissTime" />
+    <result column="user_allow_time" jdbcType="TIMESTAMP" property="userAllowTime" />
+    <result column="user_state" jdbcType="INTEGER" property="userState" />
+  </resultMap>
+  <!-- 根据用户名和密码查询用户-->
+  <select id="queryLogin" parameterType="com.yjj.sys_demo.sys.model.User">
+    SELECT user_name,user_password,user_allow_time,user_state from t_user
+    <where>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR}
+      </if>
+      <if test="userPassword != null">
+        and user_password = #{userPassword,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+  <!-- 不少内容的增加用户-->
+  <insert id="insert" parameterType="com.yjj.sys_demo.sys.model.User">
+    insert into t_user (user_id, user_name, user_password, 
+      user_email, user_phone, user_info, 
+      user_miss_time, user_allow_time, user_state
+      )
+    values (#{userId,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR}, 
+      #{userEmail,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{userInfo,jdbcType=VARCHAR}, 
+      #{userMissTime,jdbcType=TIMESTAMP}, #{userAllowTime,jdbcType=TIMESTAMP}, #{userState,jdbcType=INTEGER}
+      )
+  </insert>
+  <!-- 选择性增加用户-->
+  <insert id="insertSelective" parameterType="com.yjj.sys_demo.sys.model.User">
+    insert into t_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="userPassword != null">
+        user_password,
+      </if>
+      <if test="userEmail != null">
+        user_email,
+      </if>
+      <if test="userPhone != null">
+        user_phone,
+      </if>
+      <if test="userInfo != null">
+        user_info,
+      </if>
+      <if test="userMissTime != null">
+        user_miss_time,
+      </if>
+      <if test="userAllowTime != null">
+        user_allow_time,
+      </if>
+      <if test="userState != null">
+        user_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userPassword != null">
+        #{userPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhone != null">
+        #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="userInfo != null">
+        #{userInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="userMissTime != null">
+        #{userMissTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userAllowTime != null">
+        #{userAllowTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userState != null">
+        #{userState,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>
